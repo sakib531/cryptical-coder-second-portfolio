@@ -22,3 +22,46 @@ body{
     box-sizing: border-box;
     text-decoration: none;
 }
+
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex: wrap;
+}
+
+.justify-cintent-between{
+    justify-content: space-between;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 25px;
+}
+
+.navbar .logo a{
+    font-size: 24px;
+    color: var(--black-900);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar .logo a span{
+    color: var(--main-color);
+}
+
+.navbar .menu .nav-item{
+    display: inline-block;
+    position: relative;
+    margin-left: 36px;
+}
+
