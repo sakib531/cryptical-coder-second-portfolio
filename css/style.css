@@ -1,0 +1,24 @@
+:root{
+    --main-color: #00a78e;
+    --shadow-black-100: 0 5px 15px rgba(0,0,0,0.2);
+    --black-900: #000;
+    --black-400: #626f87;
+    --black-100: #f7f7f7;
+    --white: #fff;
+    --black-alpha-100: rgba(0,0,0,0.5);
+}
+
+body{
+    font-family: "Kaushan Script", cursive;
+    font-size: 16px;
+    font-weight: normal;
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
