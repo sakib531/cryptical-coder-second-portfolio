@@ -65,3 +65,57 @@ ul{
     margin-left: 36px;
 }
 
+.navbar .menu .nav-item .nav-item{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.navbar .menu .nav-item .nav-item span{
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-out 0s;
+}
+
+.navbar .menu .nav-item .nav-item span::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    left: 110%;
+}
+
+.navbar .menu .nav-item .nav-item span::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--white);
+    left: 140%;
+}
+
+.navbar .nav-item > .nav-link.active span,.navbar .nav-item:hover > .nav-link span{
+    opacity: 1;
+    visibility: visible;
+    width: 60%;
+}
+
+.navbar .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before{
+    width: 20%;
+}
+
+.navbar .nav-item > .nav-link.active span::after,.navbar .nav-item:hover > .nav-link span::after{
+    width: 15%;
+}
+
