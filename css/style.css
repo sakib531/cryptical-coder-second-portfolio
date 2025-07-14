@@ -70,6 +70,45 @@ img{
     padding: 80px 0;
 }
 
+.section-title{
+    margin-bottom: 30px;
+}
+
+.section-title .sub-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.section-title .main-title{
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.section-title .line{
+    padding-top: 0;
+}
+
+.section-title .line li{
+    display: inline-block;
+    background-color: var(--main-color);
+    border-radius: 50px;
+    height: 3px;
+}
+
+.section-title .line li:nth-of-type(1){
+    width: 64px;
+}
+
+.section-title .line li:nth-of-type(2){
+    width: 20px;
+}
+
+.section-title .line li:nth-of-type(3){
+    width: 12px;
+}
+
 /* navbar */
 .navbar{
     position: fixed;
@@ -157,8 +196,6 @@ img{
     visibility: visible;
     width: 60%;
 }
-
-
 
 .navbar .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before{
     width: 20%;
@@ -269,3 +306,57 @@ img{
 
 
 /* about */
+
+.about-section .about-image,
+.about-section .about-content{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.about-section .about-image .img-box{
+    position: relative;
+}
+
+.about-section .about-image .img-box img{
+    max-width: 100%;
+    width: 100%;
+    z-index: 8;
+}
+
+.about-section .about-image .img-box .about-shape{
+    width: 404px;
+    height: 525px;
+    border-left: 15px solid var(--main-color);
+    border-bottom: 15px solid var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.about-section .about-image .img-box .about-shape::before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 85%;
+    background-color: var(--main-color);
+    bottom: 0;
+    right: 0;
+}
+
+.about-section .about-image .img-box .about-shape::after{
+    position: absolute;
+    content: '';
+    width: 104%;
+    height: 15px;
+    background-color: var(--main-color);
+    top: 36px;
+    right: -2px;
+    transform: rotate(11deg);
+    border-top-left-radius: 20px;
+}
+
+.about-section .about-content p{
+    text-align: justify;
+}
