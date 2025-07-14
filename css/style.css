@@ -27,6 +27,10 @@ ul{
     list-style: none;
 }
 
+img{
+    vertical-align: middle;
+}
+
 .container{
     max-width: 1140px;
     margin: auto;
@@ -41,11 +45,44 @@ ul{
     justify-content: space-between;
 }
 
+.align-items-center{
+    align-items: center;
+}
+
+.btn-1{
+    background-color: var(--main-color);
+    padding: 15px 40px;
+    border: none;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3 ease-out;
+}
+
+.btn-1:hover{
+    color: var(--white);
+    background-color: rgba(0,167,142,0.7);
+}
+
+.section-padding{
+    padding: 80px 0;
+}
+
+/* navbar */
 .navbar{
     position: fixed;
     z-index: 999;
     width: 100%;
     padding: 25px;
+    transition: all 0.5s ease;
+}
+
+.navbar.sticky{
+    padding: 12px 25px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-black-100);
 }
 
 .navbar .logo a{
@@ -65,7 +102,7 @@ ul{
     margin-left: 36px;
 }
 
-.navbar .menu .nav-item .nav-item{
+.navbar .menu .nav-item .nav-link{
     color: var(--white);
     font-size: 16px;
     font-weight: 600;
@@ -74,7 +111,11 @@ ul{
     padding: 10px 0;
 }
 
-.navbar .menu .nav-item .nav-item span{
+.navbar.sticky .menu .nav-item .nav-link{
+    color: var(--main-color);
+}
+
+.navbar .menu .nav-item .nav-link span{
     width: 0;
     height: 2px;
     background-color: var(--white);
@@ -87,7 +128,7 @@ ul{
     transition: all 0.3s ease-out 0s;
 }
 
-.navbar .menu .nav-item .nav-item span::before{
+.navbar .menu .nav-item .nav-link span::before{
     position: absolute;
     content: '';
     width: 0;
@@ -96,7 +137,7 @@ ul{
     left: 110%;
 }
 
-.navbar .menu .nav-item .nav-item span::after{
+.navbar .menu .nav-item .nav-link span::after{
     position: absolute;
     content: '';
     width: 0;
@@ -105,11 +146,19 @@ ul{
     left: 140%;
 }
 
+.navbar.sticky .menu .nav-item .nav-link span,
+.navbar.sticky .menu .nav-item .nav-link span::before,
+.navbar.sticky .menu .nav-item .nav-link span::after{
+    background-color: var(--main-color);
+}
+
 .navbar .nav-item > .nav-link.active span,.navbar .nav-item:hover > .nav-link span{
     opacity: 1;
     visibility: visible;
     width: 60%;
 }
+
+
 
 .navbar .nav-item > .nav-link.active span::before,.navbar .nav-item:hover > .nav-link span::before{
     width: 20%;
@@ -119,3 +168,104 @@ ul{
     width: 15%;
 }
 
+/* home */
+
+.home-section{
+    position: relative;
+    background-color: var(--black-100);
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+.header-social{
+    position: absolute;
+    top: 53%;
+    left: 50px;
+    transform: translateY(-53%);
+    border: 1px solid rgba(0,167,142,0.21);
+    border-radius: 50px;
+}
+
+.header-social li a{
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 20px 15px;
+    color: rgba(100,111,135,0.58);
+    transition: all 0.3 ease-out 0s;
+}
+
+.header-social li a:hover{
+    color: var(--main-color);
+}
+
+.home-section .home-text,
+.home-section .home-img{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 25px;
+}
+
+.home-section .home-text h4{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--main-color);
+}
+
+.home-section .home-text h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--black-900);
+}
+
+.home-section .home-text span{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--black-900);
+    display: block;
+}
+
+.home-section .home-text p{
+    font-size: 16px;
+    font-weight: 24px;
+    margin-top: 15px;
+    color: var(--black-400);
+}
+
+.home-section .home-text .btn{
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.home-section .home-img .img-box img{
+    position: relative;
+    width: 100%;
+    z-index: 789;
+}
+
+.header-hero-shape{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.header-hero-shape:before{
+    position: absolute;
+    content: '';
+    width: 1000%;
+    height: 100%;
+    background-color: var(--main-color);
+    transform: skewX(20deg);
+    top: 0;
+    left: 0;
+}
+
+
+/* about */
