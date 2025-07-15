@@ -360,3 +360,19 @@ img{
 .about-section .about-content p{
     text-align: justify;
 }
+
+.skill-item .skill-header {
+    position: relative;
+}
+
+.skill-item .skill-header .skill-title{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.skill-item .skill-header .skill-percentage{
+    position: absolute;
+    top: -3px;
+    right: 0;
+}
