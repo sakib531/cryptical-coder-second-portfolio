@@ -70,6 +70,10 @@ img{
     padding: 80px 0;
 }
 
+.text-align{
+    text-align: center;
+}
+
 .section-title{
     margin-bottom: 30px;
 }
@@ -304,7 +308,6 @@ img{
     left: 0;
 }
 
-
 /* about */
 
 .about-section .about-image,
@@ -401,7 +404,8 @@ img{
     height: 9px;
     border-radius: 5px;
     background-color: var(--main-color);
-    width: 80%;
+    width: 0%;
+    transition: all 2s ease-out;
 }
 
 .skill-item .skill-bar .bar-inner .progress-line::before{
@@ -413,4 +417,11 @@ img{
     border: 2px solid var(--main-color);
     top: -7px;
     right: 0;
+}
+
+/* services */
+
+.service-section{
+    min-height: 100vh;
+    background-color: var(--black-100);
 }
