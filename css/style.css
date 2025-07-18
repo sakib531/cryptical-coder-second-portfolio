@@ -498,3 +498,32 @@ img{
 .service-section .service-item-inner:hover p{
     color: var(--black-100);
 }
+
+/* portfolio */
+
+.portfolio .portfolio-filter{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio .portfolio-filter button{
+    text-transform: uppercase;
+    margin-top: -20px;
+    outline: none;
+    border: 1px solid;
+    border-color: var(--main-color);
+    padding: 8px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: var(--white);
+    margin-right: 20px;
+    color: var(--main-color);
+}
+
+.portfolio .portfolio-filter button.active{
+    color: var(--white);
+    background-color: var(--main-color);
+    
+}
